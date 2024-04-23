@@ -6,9 +6,7 @@ import './HomeContent.css';
 const HomeContent = () => {
 
   return(
-    <div className="HomeContent">
-       
-    </div>
+    <div className="HomeContent"></div>
   );
 };
 

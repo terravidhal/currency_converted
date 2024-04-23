@@ -92,14 +92,28 @@ const Convert = () => {
              </div>
        </div>
        <div className="convert-results">
-         <div className="line1"></div>
-         <div className="line2"></div>
-         <div className="line3"></div>
+         <div className="line1">1.00 United States Dollar = </div>
+         <div className="line2">
+           <span className="nb1">0.93</span>
+           <span className="nb2">847853  </span>
+           <span className="nb3">Euro</span>
+         </div>
+         <div className="line3">1 EUR = 1.06527 USD </div>
        </div>
        <div className="convert-actions">
-         <div className="notify"></div>
+         <div className="notify">
+            <div className="notify-icon">
+             <img src="../src/assets/infos.svg" alt="" />
+            </div>
+            <div className="notify-resume">
+            We use the mid-market rate for our converter. 
+            The rate is given for information purposes only. 
+            You will not benefit from this rate when sending money.
+            <a href='#' className='notify-link'> Check shipping rates.</a>
+            </div>
+         </div>
          <div className="validate-btn">
-            <button>Get Exchange Rate</button>
+            <button>Convert</button>
          </div>
        </div>
       </form>

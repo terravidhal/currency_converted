@@ -86,3 +86,73 @@
 .Convert .btn-transact img{
     width: 20px;
 }
+.Convert .convert-results{
+   padding-top: 20px;
+}
+.Convert .convert-results .line1{
+    color: rgb(92, 102, 123);
+  font-weight: 600;
+  margin: 0px;
+  font-size: 16px;
+  max-width: 100%;
+}
+.Convert .convert-results .line2{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(46, 60, 87);
+}
+.Convert .convert-results .line2 .nb2{
+    color: rgb(161, 166, 176);
+}
+.Convert .convert-results .line3{
+    text-align: left;
+    margin-bottom: 24px;
+    color: rgb(92, 102, 123);
+    font-size: 14px;
+}
+.Convert .notify{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  background: rgb(242, 247, 254);
+  border-radius: 6px;
+  max-width: 500px;
+  font-size: 11px;
+  margin: 0px 8px 8px 0px;
+  color: rgb(55, 60, 73);
+  height: 65.5px;
+}
+.Convert .notify .notify-icon{
+  margin-right: 15px;
+}
+.Convert .notify .notify-icon img{
+  color: rgb(92, 102, 123);
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+.Convert .notify .notify-link{
+  color: rgb(0, 108, 224);
+  border-bottom: 1px solid rgb(0, 108, 224);
+}
+.Convert .convert-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Convert .validate-btn{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  font-weight: 600;
+  padding: 0px 20px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 113, 235);
+  border: 2px solid rgb(0, 113, 235);
+  border-radius: 8px;
+  height: 50px;
+}

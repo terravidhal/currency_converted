@@ -1,12 +1,14 @@
 .BoxConverter {
   width: 950px;
-  height: 330.833px;
+  /* height: 330.833px; */
+  min-height: 105px;
   background-color: white;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -30%);
   border-radius: 8px;
+  box-shadow: rgba(35, 55, 80, 0.3) 0px 6px 12px;
 }
 .BoxConverter input{
  border: 1px solid;
