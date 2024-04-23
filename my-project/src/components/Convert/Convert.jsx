@@ -48,30 +48,34 @@ const Convert = () => {
   return (
     <div className="Convert">
       <form onSubmit={onSubmitHandler}>
-       <div className="convert-inputs">
-        <div className="amount">
-          <label htmlFor="amount">Enter Amount</label>
-          <input id='amount' type="text" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
-        </div>
-         <div className="of">
-            <label htmlFor="of">Of</label>
-            <div className="contains-of">
-               <img src={"https://flagcdn.com/48x36/"+country_code[indCountry2].toLowerCase()+".png"} alt="flag" />
-               <select id='of' defaultValue={OfCurrencyCountry} onChange={(e)=>setOfCurrencyCountry(e.target.value)}>
-                 {
-                   Object.keys(country_list).map((currency_code, i)=>{
-                       return (
-                         <option key={currency_code} value={currency_code} onClick={()=>{setIndCountry2(i)}}>{currency_code}</option>
-                       );
-                   })
-                 }
-               </select>
-            </div>
-         </div>
-         <div className="btn-transact"></div>
-        <div className="toward">
-             <label htmlFor="toward">toward</label>
-             <div className="contain-toward">
+       <div className="convert-inputs flex">
+             <div className="cvrt amount">
+                 <label htmlFor="amount">Amount</label>
+                 <input id='amount' type="text" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
+             </div>
+              <div className="cvrt of">
+                 <label htmlFor="of">Of</label>
+                 <div className="contains-of">
+                     <img src={"https://flagcdn.com/48x36/"+country_code[indCountry2].toLowerCase()+".png"} alt="flag" />
+                     <select id='of' defaultValue={OfCurrencyCountry} onChange={(e)=>setOfCurrencyCountry(e.target.value)}>
+                       {
+                         Object.keys(country_list).map((currency_code, i)=>{
+                             return (
+                               <option key={currency_code} value={currency_code} onClick={()=>{setIndCountry2(i)}}>{currency_code}</option>
+                             );
+                         })
+                       }
+                     </select>
+                 </div>
+              </div>
+              <div className="btn-ctn">
+                 <div className="btn-transact">
+                     <img src="../src/assets/transfert.svg" alt="" />
+                 </div>
+              </div>
+             <div className="cvrt toward">
+                 <label htmlFor="toward">towards</label>
+                 <div className="contain-toward">
                  <img src={"https://flagcdn.com/48x36/"+country_code[indCountry].toLowerCase()+".png"} alt="flag" />
                <select id='toward' defaultValue={toCurrencyCountry} onChange={(e)=>setToCurrencyCountry(e.target.value)}>
                   {
@@ -84,8 +88,8 @@ const Convert = () => {
                     })
                   }
                </select>
+                 </div>
              </div>
-        </div>
        </div>
        <div className="convert-results">
          <div className="line1"></div>

@@ -6,7 +6,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -30%);
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .BoxConverter input{
  border: 1px solid;
@@ -42,12 +42,12 @@
   border-top-left-radius: 5px;
 }
 .BoxConverter .tb {
-  color: rgb(114, 54, 114);
+  color: rgb(0, 111, 232);
   background-color: white;
   cursor: pointer;
 }
 .BoxConverter .tb.selectedTab {
-  color: rgb(114, 54, 114);
+  color: rgb(0, 111, 232);
   background-color: white;
   font-weight: bold;
 }
