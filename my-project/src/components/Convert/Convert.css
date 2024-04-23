@@ -1,5 +1,4 @@
 .Convert {
-    padding: 40px;
 }
 
 .Convert .convert-inputs{
@@ -141,7 +140,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.Convert .validate-btn{
+.Convert .validate-btn button{
   cursor: pointer;
   display: flex;
   justify-content: center;

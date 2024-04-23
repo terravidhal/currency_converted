@@ -1,7 +1,7 @@
 .BoxConverter {
   width: 950px;
-  /* height: 330.833px; */
-  min-height: 105px;
+  min-height: 330.833px;
+  /* min-height: 105px; */
   background-color: white;
   position: absolute;
   left: 50%;
@@ -56,7 +56,10 @@
 .BoxConverter .tb.nonSelectedTab {
   color: black;
   background-color: #efefef;
+  background-color: rgb(240, 245, 250);
+  color: rgb(55, 80, 110);
 }
 .BoxConverter .Results {
   /* height: calc(330.833px - 56px); */
+  padding: 40px;
 }

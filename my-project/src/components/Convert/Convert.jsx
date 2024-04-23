@@ -13,6 +13,10 @@ const Convert = () => {
   const [OfCurrencyCountry, setOfCurrencyCountry] = useState("USD");
   const [toCurrencyCountry, setToCurrencyCountry] = useState("EUR");
   const [amount, setAmount] = useState(1);
+  const [exchangeRate, setExchangeRate] = useState(0);
+  const [totalExRate, setTotalExRate] = useState(0);
+  const [exchangeRate2, setExchangeRate2] = useState(0);
+  const [totalExRate2, setTotalExRate2] = useState(0);
 
 
   const onSubmitHandler = async(e) => {
@@ -21,25 +25,44 @@ const Convert = () => {
   }
 
   const  getExchangeRate = () =>{
-    const exchangeRateTxt = document.querySelector("form .convert-results");
-    let amountVal = amount;
-    exchangeRateTxt.innerText = "Getting exchange rate...";
+   // const exchangeRateTxt = document.querySelector("form .convert-results");
+   // exchangeRateTxt.innerText = "Getting exchange rate...";
 
-    let urls = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${OfCurrencyCountry}`;
+    let url1 = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${OfCurrencyCountry}`;
+    let url2 = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${toCurrencyCountry}`;
 
-    axios
-      .get(urls)
+  /*  axios
+      .get(url1)
       .then((res) => {
         console.log("u++++++++++",res.data);
         console.log("u++++++++++",res.data.conversion_rates[toCurrencyCountry]);
-        const exchangeRate = res.data.conversion_rates[toCurrencyCountry]; // taux de change
-        const totalExRate = (amountVal * exchangeRate).toFixed(2);
-        exchangeRateTxt.innerText = `${amountVal} ${OfCurrencyCountry} = ${totalExRate} ${toCurrencyCountry}`;
+        setExchangeRate(res.data.conversion_rates[toCurrencyCountry]); // taux de change
+        setTotalExRate((amount * exchangeRate));
       })
       .catch((err) => {
-        exchangeRateTxt.innerText = "Something went wrong";
+       // exchangeRateTxt.innerText = "Something went wrong";
         console.log(err);
-      });
+      }); */
+
+
+      axios.all([
+        axios.get(url1), 
+        axios.get(url2)
+      ])
+      .then(axios.spread((res1, res2) => {
+         console.log("u1",res1.data);
+        // console.log("u1",res1.data.conversion_rates[toCurrencyCountry]);
+           setExchangeRate(res1.data.conversion_rates[toCurrencyCountry]); // taux de change
+           setTotalExRate((amount * res1.data.conversion_rates[toCurrencyCountry]));
+           console.log('444', totalExRate);
+         console.log("u2",res2.data);
+       //  console.log("u2",res2.data.conversion_rates[OfCurrencyCountry]);
+          setExchangeRate2(res2.data.conversion_rates[OfCurrencyCountry]); // taux de change
+          setTotalExRate2((amount * res2.data.conversion_rates[OfCurrencyCountry]));
+      })) .catch((err1, err2) => {
+         console.log(err1);
+         console.log(err2);
+       });;
   }
 
 
@@ -51,7 +74,7 @@ const Convert = () => {
        <div className="convert-inputs flex">
              <div className="cvrt amount">
                  <label htmlFor="amount">Amount</label>
-                 <input id='amount' type="text" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
+                 <input id='amount' type="number" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
              </div>
               <div className="cvrt of">
                  <label htmlFor="of">Of</label>
@@ -92,13 +115,13 @@ const Convert = () => {
              </div>
        </div>
        <div className="convert-results">
-         <div className="line1">1.00 United States Dollar = </div>
+         <div className="line1">{amount} {OfCurrencyCountry} = </div>
          <div className="line2">
-           <span className="nb1">0.93</span>
-           <span className="nb2">847853  </span>
-           <span className="nb3">Euro</span>
+           <span className="nb1">{totalExRate.toFixed(8).toString().split('.')[0]}.</span>
+           <span className="nb2">{totalExRate.toFixed(8).toString().split('.')[1]}  </span>
+           <span className="nb3">{toCurrencyCountry}</span>
          </div>
-         <div className="line3">1 EUR = 1.06527 USD </div>
+         <div className="line3">{amount} {toCurrencyCountry} =  {totalExRate2.toFixed(8)} {OfCurrencyCountry} </div>
        </div>
        <div className="convert-actions">
          <div className="notify">
