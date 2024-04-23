@@ -1,82 +1,60 @@
 .BoxConverter {
-    width: 950px;
-    height: 330.833px;
-    background-color: rgba(0, 128, 0, 0.703);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -30%);
-    border-radius: 5px;
+  width: 950px;
+  height: 330.833px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+  border-radius: 5px;
+}
+.BoxConverter input{
+ border: 1px solid;
+}
+.BoxConverter .title-tab{
+ padding-left: 10px;
+}
+.BoxConverter .img0{
+   width: 24px;
+   height: 24px;
+}
+.BoxConverter .img3{
+   width: 20px;
+   height: 20px;
+}
+.BoxConverter .img1, .BoxConverter .img2{
+   width: 15px;
+   height: 15px;
 }
 
-
-
-.BoxConverter{
-    text-align: center;
-    display: inline-block;
-    margin: 2px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .BoxConverter .selectedTab {
-    color: white;
-    background-color: black;
-    border: 2px solid black;
-  }
-  
-  .BoxConverter .nonSelectedTab {
-    color: black;
-    background-color: white;
-    border: 2px solid #bbbbbb;
-  }
-  
-  
-  /**/
-  .BoxConverter .tb {
-    color: white;
-    background-color: black;
-    border: 2px solid black;
-  }
-  .BoxConverter .tb.selectedTab  {
-    color: white;
-    background-color: black;
-    border: 2px solid black;
-  }
-  .BoxConverter .tb.nonSelectedTab {
-    color: black;
-    background-color: white;
-    border: 2px solid #bbbbbb;
-  }
-  .BoxConverter .tb.selectedTab.fadeIn  {
-    color: white;
-    background-color: black;
-    border: 2px solid black;
-    opacity: 0;
-  }
-  .BoxConverter .tb.nonSelectedTab.fadeOut {
-    color: black;
-    background-color: white;
-    border: 2px solid #bbbbbb;
-    opacity: 1;
-  }
-  .BoxConverter .tb.selectedTab.fadeOut  {
-    color: white;
-    background-color: black;
-    border: 2px solid black;
-    opacity: 1;
-  }
-  .BoxConverter .tb.nonSelectedTab.fadeIn {
-    color: black;
-    background-color: white;
-    border: 2px solid #bbbbbb;
-    opacity: 0;
-  }
-  /**/
-  
-  .BoxConverter .results {
-    width: 85%;
-    height: 100px;
-    margin: auto;
-    border: 2px solid #777777;
-  }
+.BoxConverter .Tab {
+  display: flex;
+}
+.BoxConverter .Tab .tab {
+  flex: 1;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BoxConverter .Tab .tab:nth-child(1) , 
+.BoxConverter .Tab .tab:nth-child(4) {
+  border-top-left-radius: 5px;
+}
+.BoxConverter .tb {
+  color: rgb(114, 54, 114);
+  background-color: white;
+  cursor: pointer;
+}
+.BoxConverter .tb.selectedTab {
+  color: rgb(114, 54, 114);
+  background-color: white;
+  font-weight: bold;
+}
+.BoxConverter .tb.nonSelectedTab {
+  color: black;
+  background-color: #efefef;
+}
+.BoxConverter .Results {
+  /* height: calc(330.833px - 56px); */
+}

@@ -8,15 +8,17 @@ const Tab = (props) => {
     <div className="Tab">
       {
         allTabs.map((item, index) => (
-          <div className={`tab tb ${ index === currentTabIndex ?"selectedTab" : "nonSelectedTab"  }`} 
+          <div key={item.title} className={`tab tb ${ index === currentTabIndex ?"selectedTab" : "nonSelectedTab"  }`} 
           onClick={(e) => setCurrentTabIndex(index) }>
-            { item.title }
+            <img className={'img'+index} src={"../src/assets/"+ item.title +".svg"} alt={item.title} />
+            <div className="title-tab">
+               { item.title }
+            </div>
           </div>
         ))
       }
     </div>
   )
 }
-
 
 export default Tab;
