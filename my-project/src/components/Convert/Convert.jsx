@@ -15,7 +15,7 @@ const Convert = () => {
   const [amount, setAmount] = useState(1);
 
 
-  const onSubmitHandler =  async(e) => {
+  const onSubmitHandler = async(e) => {
     e.preventDefault();
     getExchangeRate();
   }
