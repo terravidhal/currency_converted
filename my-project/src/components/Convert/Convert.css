@@ -105,9 +105,15 @@
 }
 .Convert .convert-results .line3{
     text-align: left;
-    margin-bottom: 24px;
     color: rgb(92, 102, 123);
     font-size: 14px;
+}
+.Convert .error{
+  color: rgb(161, 166, 176);
+  font-weight: 600;
+  margin: 0px;
+  font-size: 25px;
+  max-width: 100%;
 }
 .Convert .notify{
   display: flex;
@@ -139,6 +145,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 24px;
 }
 .Convert .validate-btn button{
   cursor: pointer;
@@ -151,7 +158,6 @@
   font-size: 16px;
   color: rgb(255, 255, 255);
   background: rgb(0, 113, 235);
-  border: 2px solid rgb(0, 113, 235);
   border-radius: 8px;
   height: 50px;
 }

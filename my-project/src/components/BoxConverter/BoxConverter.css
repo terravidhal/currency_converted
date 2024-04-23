@@ -20,6 +20,7 @@
    width: 24px;
    height: 24px;
 }
+
 .BoxConverter .img3{
    width: 20px;
    height: 20px;
@@ -52,6 +53,18 @@
   color: rgb(0, 111, 232);
   background-color: white;
   font-weight: bold;
+}
+.BoxConverter .tb.selectedTab .img0,
+.BoxConverter .tb.selectedTab .img1 ,
+.BoxConverter .tb.selectedTab .img2,
+.BoxConverter .tb.selectedTab .img3    {
+  filter: invert(38%) sepia(73%) saturate(7498%) hue-rotate(201deg) brightness(97%) contrast(101%);
+}
+.BoxConverter .tb.nonSelectedTab .img0,
+.BoxConverter .tb.nonSelectedTab .img1 ,
+.BoxConverter .tb.nonSelectedTab .img2,
+.BoxConverter .tb.nonSelectedTab .img3    {
+  filter: invert(26%) sepia(57%) saturate(387%) hue-rotate(172deg) brightness(98%) contrast(90%);
 }
 .BoxConverter .tb.nonSelectedTab {
   color: black;

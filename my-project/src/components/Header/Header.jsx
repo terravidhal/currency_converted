@@ -19,8 +19,8 @@ const Header = () => {
       overflowY: 'auto',
     }}>
       <div className='title text-center'>
-        <h1 className='text-white'>Payunit currency converter</h1>
-        <h3 className='text-white'>welcome to the world's most popular money tool</h3>
+        <h1 className='text-white'>PayUnit Currency Converter</h1>
+        <h3 className='text-white'>welcome to the world's most popular money tool.</h3>
       </div>
      </div>
   );
