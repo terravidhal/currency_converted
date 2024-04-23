@@ -4,7 +4,12 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Header from "./components/Header/Header";
+import Home from "./views/Home/Home";
+import BoxConverter from "./components/BoxConverter/BoxConverter";
+import Convert from "./components/Convert/Convert";
+import Send from "./components/Send/Send";
+import Graphics from "./components/Graphics/Graphics";
+import Alerts from "./components/Alerts/Alerts";
 
 
 
@@ -15,8 +20,8 @@ import Header from "./components/Header/Header";
 const App = () => {
   return (
         <Routes>
-        <Route path="/" element={<Navigate replace to="/home"  />} />  {/* redirection */}
-        <Route path="/home" element={<Header />} />
+        <Route path="/" element={<Navigate replace to="/home"  />} />  
+        <Route path="/home" element={<Home />} />
       </Routes>
   );
 };

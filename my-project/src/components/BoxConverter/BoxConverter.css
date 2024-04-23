@@ -1,0 +1,82 @@
+.BoxConverter {
+    width: 950px;
+    height: 330.833px;
+    background-color: rgba(0, 128, 0, 0.703);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 5px;
+}
+
+
+
+.BoxConverter{
+    text-align: center;
+    display: inline-block;
+    margin: 2px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .BoxConverter .selectedTab {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+  }
+  
+  .BoxConverter .nonSelectedTab {
+    color: black;
+    background-color: white;
+    border: 2px solid #bbbbbb;
+  }
+  
+  
+  /**/
+  .BoxConverter .tb {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+  }
+  .BoxConverter .tb.selectedTab  {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+  }
+  .BoxConverter .tb.nonSelectedTab {
+    color: black;
+    background-color: white;
+    border: 2px solid #bbbbbb;
+  }
+  .BoxConverter .tb.selectedTab.fadeIn  {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    opacity: 0;
+  }
+  .BoxConverter .tb.nonSelectedTab.fadeOut {
+    color: black;
+    background-color: white;
+    border: 2px solid #bbbbbb;
+    opacity: 1;
+  }
+  .BoxConverter .tb.selectedTab.fadeOut  {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    opacity: 1;
+  }
+  .BoxConverter .tb.nonSelectedTab.fadeIn {
+    color: black;
+    background-color: white;
+    border: 2px solid #bbbbbb;
+    opacity: 0;
+  }
+  /**/
+  
+  .BoxConverter .results {
+    width: 85%;
+    height: 100px;
+    margin: auto;
+    border: 2px solid #777777;
+  }
